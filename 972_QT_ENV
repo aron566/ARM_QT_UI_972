@@ -1,0 +1,10 @@
+#!/bin/sh
+export QT_ROOT=/usr/5.9qtlib
+export QTDIR=/usr/5.9qtlib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$QT_ROOT
+#export QT_QPA_EGLFS_ROTATION=90
+export QML2_IMPORT_PATH=$QT_ROOT/qml
+export QT_QPA_PLATFORM_PLUGIN_PATH=$QT_ROOT/plugins
+export QT_QPA_PLATFORM=linuxfb:fb=/dev/fb0:rotation=180
+export QT_QPA_FONTDIR=$QT_ROOT/fonts
+export PATH=$PATH:/usr/app
