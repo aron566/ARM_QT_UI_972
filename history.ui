@@ -1,0 +1,1640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>history</class>
+ <widget class="QWidget" name="history">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>272</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 87, 83);
+color: rgb(238, 238, 236);</string>
+  </property>
+  <widget class="QGroupBox" name="realtimegroupBox">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>0</y>
+     <width>470</width>
+     <height>220</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>实时数据显示:</string>
+   </property>
+   <widget class="QLabel" name="maxad_1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>16</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(249, 11, 11);
+font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>62</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>84</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>62</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>40</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(193, 125, 17);
+font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>84</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>16</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>62</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>84</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>40</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>84</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>16</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>40</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(193, 125, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxad_2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>16</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(249, 11, 11);
+font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>62</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_3">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>62</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_3">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>84</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_3">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>40</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_3">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>16</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_3">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>84</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxad_3">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>16</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(249, 11, 11);
+font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_3">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>40</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(193, 125, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_3">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>62</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_4">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>62</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>84</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_4">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>40</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_4">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>16</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_4">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>84</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxad_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>16</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(249, 11, 11);
+font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>40</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(193, 125, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_4">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>62</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_5">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>62</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_5">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>84</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_5">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>40</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_5">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>16</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_5">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>84</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxad_5">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>16</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(249, 11, 11);
+font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_5">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>40</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(193, 125, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_5">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>62</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>162</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_6">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>184</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);
+</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>184</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxad_6">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(249, 11, 11);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_6">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>140</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(193, 125, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_6">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>162</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_7">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>162</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_7">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>184</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_7">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>140</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_7">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>120</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_7">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>184</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxad_7">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>120</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(249, 11, 11);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_7">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>140</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(193, 125, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_7">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>162</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_8">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>162</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_8">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>184</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_8">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>140</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_8">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>120</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_8">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>184</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxad_8">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>120</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(249, 11, 11);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_8">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>140</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(193, 125, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_8">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>162</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_9">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>162</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_9">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>184</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_9">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>140</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_9">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>120</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_9">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>184</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxad_9">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>120</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(249, 11, 11);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_9">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>140</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(193, 125, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_9">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>162</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagead_10">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>162</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="averagelabel_10">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>162</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;平均AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minlabel_10">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>140</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最小AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="minad_10">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>140</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(193, 125, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimelabel_10">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>184</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;实时AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxad_10">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>120</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(249, 11, 11);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;2020&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="realtimead_10">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>184</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 30pt &quot;Ubuntu&quot;;
+color: rgb(74, 244, 17);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:30pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maxadlabel_10">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>120</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:34pt;&quot;&gt;最大AD值:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_1Button">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_2Button">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>100</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_3Button">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_4Button">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>100</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_5Button">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>100</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_6Button">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_7Button">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>200</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_8Button">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>200</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_9Button">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>200</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="CHANNEL_10Button">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>200</y>
+      <width>70</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 25pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>10</string>
+    </property>
+   </widget>
+   <zorder>maxad_1</zorder>
+   <zorder>averagead_1</zorder>
+   <zorder>realtimead_1</zorder>
+   <zorder>minlabel_1</zorder>
+   <zorder>averagelabel_1</zorder>
+   <zorder>minad_1</zorder>
+   <zorder>realtimelabel_1</zorder>
+   <zorder>maxadlabel_1</zorder>
+   <zorder>averagelabel_2</zorder>
+   <zorder>realtimead_2</zorder>
+   <zorder>minlabel_2</zorder>
+   <zorder>realtimelabel_2</zorder>
+   <zorder>maxadlabel_2</zorder>
+   <zorder>minad_2</zorder>
+   <zorder>averagead_2</zorder>
+   <zorder>averagelabel_3</zorder>
+   <zorder>realtimead_3</zorder>
+   <zorder>minlabel_3</zorder>
+   <zorder>maxadlabel_3</zorder>
+   <zorder>realtimelabel_3</zorder>
+   <zorder>maxad_3</zorder>
+   <zorder>minad_3</zorder>
+   <zorder>averagead_3</zorder>
+   <zorder>averagelabel_4</zorder>
+   <zorder>realtimead_4</zorder>
+   <zorder>minlabel_4</zorder>
+   <zorder>maxadlabel_4</zorder>
+   <zorder>realtimelabel_4</zorder>
+   <zorder>maxad_4</zorder>
+   <zorder>minad_4</zorder>
+   <zorder>averagead_4</zorder>
+   <zorder>averagelabel_5</zorder>
+   <zorder>realtimead_5</zorder>
+   <zorder>minlabel_5</zorder>
+   <zorder>maxadlabel_5</zorder>
+   <zorder>realtimelabel_5</zorder>
+   <zorder>maxad_5</zorder>
+   <zorder>minad_5</zorder>
+   <zorder>averagead_5</zorder>
+   <zorder>averagelabel_6</zorder>
+   <zorder>realtimead_6</zorder>
+   <zorder>minlabel_6</zorder>
+   <zorder>maxadlabel_6</zorder>
+   <zorder>realtimelabel_6</zorder>
+   <zorder>maxad_6</zorder>
+   <zorder>minad_6</zorder>
+   <zorder>averagead_6</zorder>
+   <zorder>averagelabel_7</zorder>
+   <zorder>realtimead_7</zorder>
+   <zorder>minlabel_7</zorder>
+   <zorder>maxadlabel_7</zorder>
+   <zorder>realtimelabel_7</zorder>
+   <zorder>maxad_7</zorder>
+   <zorder>minad_7</zorder>
+   <zorder>averagead_7</zorder>
+   <zorder>averagelabel_8</zorder>
+   <zorder>realtimead_8</zorder>
+   <zorder>minlabel_8</zorder>
+   <zorder>maxadlabel_8</zorder>
+   <zorder>realtimelabel_8</zorder>
+   <zorder>maxad_8</zorder>
+   <zorder>minad_8</zorder>
+   <zorder>averagead_8</zorder>
+   <zorder>averagelabel_9</zorder>
+   <zorder>realtimead_9</zorder>
+   <zorder>minlabel_9</zorder>
+   <zorder>maxadlabel_9</zorder>
+   <zorder>realtimelabel_9</zorder>
+   <zorder>maxad_9</zorder>
+   <zorder>minad_9</zorder>
+   <zorder>averagead_9</zorder>
+   <zorder>averagead_10</zorder>
+   <zorder>averagelabel_10</zorder>
+   <zorder>minlabel_10</zorder>
+   <zorder>minad_10</zorder>
+   <zorder>realtimelabel_10</zorder>
+   <zorder>maxad_10</zorder>
+   <zorder>realtimead_10</zorder>
+   <zorder>maxadlabel_10</zorder>
+   <zorder>CHANNEL_1Button</zorder>
+   <zorder>CHANNEL_2Button</zorder>
+   <zorder>CHANNEL_3Button</zorder>
+   <zorder>CHANNEL_4Button</zorder>
+   <zorder>CHANNEL_5Button</zorder>
+   <zorder>CHANNEL_6Button</zorder>
+   <zorder>CHANNEL_7Button</zorder>
+   <zorder>CHANNEL_8Button</zorder>
+   <zorder>CHANNEL_9Button</zorder>
+   <zorder>CHANNEL_10Button</zorder>
+   <zorder>maxad_2</zorder>
+  </widget>
+  <widget class="QGroupBox" name="runmodegroupBox">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>220</y>
+     <width>470</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>运行模式:</string>
+   </property>
+   <widget class="QLabel" name="configstate">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>20</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(249, 11, 11);
+font: 36pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>否</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="calibrationstate">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(193, 125, 17);
+font: 36pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>否</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="updatestate">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>20</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(74, 244, 17);
+font: 36pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>否</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="configlabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>配置中:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="calibrationlabel">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>20</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>标定中:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="updatelabel">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>升级中:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="return_Button">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>12</y>
+      <width>83</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>菜单</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ageinglabel">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>20</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>老化中:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ageingstate">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>20</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 85, 0);
+font: 36pt &quot;Ubuntu&quot;;</string>
+    </property>
+    <property name="text">
+     <string>否</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

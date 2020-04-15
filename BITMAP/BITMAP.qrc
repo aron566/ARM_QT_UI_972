@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>logoGNNC.jpg</file>
+        <file>analytics.png</file>
+        <file>clock.png</file>
+        <file>system.png</file>
+        <file>search.png</file>
+        <file>on.png</file>
+        <file>board.png</file>
+    </qresource>
+</RCC>
