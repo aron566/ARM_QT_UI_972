@@ -69,6 +69,7 @@ waveWindow::waveWindow(QWidget *parent) :
 //    m_axisX->setRange(0 ,X_MAX_SEC);
     m_axisY = new QValueAxis(this);
     m_axisY->setRange(0 ,3000);
+	m_chart->addAxis(m_axisY,Qt::AlignLeft);//new style
 
     //时间坐标轴X
     m_axisX = new QDateTimeAxis(this);
@@ -101,7 +102,6 @@ waveWindow::waveWindow(QWidget *parent) :
     //将坐标轴与系列绑定
     m_chart->setAxisX(m_axisX,splineSeries);//obsolete code
     m_chart->setAxisY(m_axisY,splineSeries);//obsolete code
-//    m_chart->addAxis(m_axisY,Qt::AlignLeft);//new style
 
     //隐藏图列
     m_chart->legend()->hide();
@@ -168,15 +168,19 @@ void waveWindow::Send_Database_AD_Value_slot(const QList<PontData_t>&queryData,c
         {
             if(ChannelpointCnt[current_read_channel].recordCnt_min >= X_MAX_MIN_SEC)
             {
-                //去除旧数据，再追加一条新数据
-                channelpoint_buff_min[current_read_channel].removeFirst();
-                for(quint32 x = 0;x < X_MAX_MIN_SEC-1;x++)
-                {
-//非时间轴                    channelpoint_buff_min[current_read_channel].replace(x,QPointF(x,channelpoint_buff_min[current_read_channel].value(x).y()));
-                }
-                //追加数据
-//非时间轴                channelpoint_buff_min[current_read_channel].append(QPointF(360*60-1,queryData.value(i).advalue));
-                addOnePointToVector(&channelpoint_buff_min[current_read_channel], queryData.value(i).time, queryData.value(i).advalue);
+				//确认是新数据，才会移除，追加操作
+				if(ChannelpointCnt[current_read_channel].last_time < queryData.value(i).time)
+				{
+					//去除旧数据，再追加一条新数据
+					channelpoint_buff_min[current_read_channel].removeFirst();
+					for(quint32 x = 0;x < X_MAX_MIN_SEC-1;x++)
+					{
+//非时间轴                    	channelpoint_buff_min[current_read_channel].replace(x,QPointF(x,channelpoint_buff_min[current_read_channel].value(x).y()));
+					}
+					//追加数据
+//非时间轴                		channelpoint_buff_min[current_read_channel].append(QPointF(360*60-1,queryData.value(i).advalue));
+					addOnePointToVector(&channelpoint_buff_min[current_read_channel], queryData.value(i).time, queryData.value(i).advalue);
+				}
             }
             else
             {
@@ -195,16 +199,19 @@ void waveWindow::Send_Database_AD_Value_slot(const QList<PontData_t>&queryData,c
             //是否已经记录了360秒数据，需要进行坐标轴扩大操作
             if(ChannelpointCnt[current_read_channel].recordCnt_sec >= X_MAX_SEC)
             {
-
-                //去除旧数据，再追加一条新数据
-                channelpoint_buff_sec[current_read_channel].removeFirst();
-                for(quint32 x = 0;x < X_MAX_SEC-1;x++)
-                {
-//非时间轴                    channelpoint_buff_sec[current_read_channel].replace(x,QPointF(x,channelpoint_buff_sec[current_read_channel].at(x).y()));
-                }
-                //追加数据
-//非时间轴                channelpoint_buff_sec[current_read_channel].append(QPointF(359,queryData.value(i).advalue));
-                addOnePointToVector(&channelpoint_buff_sec[current_read_channel], queryData.value(i).time, queryData.value(i).advalue);
+				//确认是新数据，才会移除，追加操作
+				if(ChannelpointCnt[current_read_channel].last_time < queryData.value(i).time)
+				{
+					//去除旧数据，再追加一条新数据
+					channelpoint_buff_sec[current_read_channel].removeFirst();
+					for(quint32 x = 0;x < X_MAX_SEC-1;x++)
+					{
+//非时间轴                    	channelpoint_buff_sec[current_read_channel].replace(x,QPointF(x,channelpoint_buff_sec[current_read_channel].at(x).y()));
+					}
+					//追加数据
+//非时间轴                		channelpoint_buff_sec[current_read_channel].append(QPointF(359,queryData.value(i).advalue));
+					addOnePointToVector(&channelpoint_buff_sec[current_read_channel], queryData.value(i).time, queryData.value(i).advalue);
+				}
             }
             else
             {
