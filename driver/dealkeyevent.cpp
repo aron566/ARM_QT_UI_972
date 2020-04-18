@@ -55,7 +55,6 @@ void dealKeyEvent::on_spaceButton_clicked()
 //单按键状态虚拟按下
 void dealKeyEvent::on_key_pressed(int key)
 {
-
     QWidget *receiver = QApplication::focusWidget();
     QKeyEvent keyPress(QEvent::KeyPress, static_cast<Qt::Key>(key), Qt::NoModifier, QString(""));
     QApplication::sendEvent(receiver, &keyPress);
@@ -63,7 +62,6 @@ void dealKeyEvent::on_key_pressed(int key)
 //单按键状态虚拟释放
 void dealKeyEvent::on_key_release(int key)
 {
-
     QWidget *receiver = QApplication::focusWidget();
     QKeyEvent keyRelease(QEvent::KeyRelease, static_cast<Qt::Key>(key), Qt::NoModifier, QString(""));
     QApplication::sendEvent(receiver, &keyRelease);
@@ -77,9 +75,19 @@ void dealKeyEvent::timerEvent(QTimerEvent *event)
         this->killTimer(timerID);
         on_key_pressed(Qt::Key_Right);
         on_key_release(Qt::Key_Space);
-
 //        on_key_pressed(Qt::Key_Space);
 //        on_key_release(Qt::Key_Space);
-
     }
 }
+
+/*过滤重复按键事件
+void yourClass::keyPressEvent(QKeyEvent *event)  
+ {   
+     if ( event->isAutoRepeat() )   
+     {  
+         cout << "ignoring current key : " << event->key() << "\n";  
+         event->ignore();  
+     return;  
+    }  
+} 
+*/
